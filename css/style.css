@@ -12,7 +12,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url(/img/head_img.png);
+  background-image: url(../img/head_img.png);
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,7 +219,7 @@
 
 .section2__wrap {
   background-size: cover;
-  background-image: url(/img/sec2_background.png);
+  background-image: url(../img/sec2_background.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +330,7 @@
 }
 
 .section3 {
-  background-image: url(/img/house.png);
+  background-image: url(../img/house.png);
   width: 100%;
   min-height: 75vh;
   background-size: cover;
@@ -398,7 +398,7 @@
 }
 
 .section4 {
-  background-image: url(/img/sea.png);
+  background-image: url(../img/sea.png);
   width: 100%;
   min-height: 75vh;
   background-size: cover;
@@ -467,7 +467,7 @@
 }
 
 .section5__cart {
-  background-image: url(/img/background3.png);
+  background-image: url(../img/background3.png);
   width: 100%;
   min-height: 75vh;
   background-size: cover;

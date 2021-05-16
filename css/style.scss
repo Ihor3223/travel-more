@@ -16,7 +16,7 @@ $laptopL: 1440px;
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url(/img/head_img.png);
+  background-image: url(../img/head_img.png);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -154,7 +154,7 @@ $laptopL: 1440px;
   height: 75vh;
   &__wrap {
     background-size: cover;
-    background-image: url(/img/sec2_background.png);
+    background-image: url(../img/sec2_background.png);
     display: flex;
     height: 75vh;
     &-container {
@@ -227,7 +227,7 @@ $laptopL: 1440px;
 }
 
 .section3 {
-  background-image: url(/img/house.png);
+  background-image: url(../img/house.png);
   width: 100%;
   min-height: 75vh;
   background-size: cover;
@@ -277,7 +277,7 @@ $laptopL: 1440px;
 }
 
 .section4 {
-  background-image: url(/img/sea.png);
+  background-image: url(../img/sea.png);
   width: 100%;
   min-height: 75vh;
   background-size: cover;
@@ -331,7 +331,7 @@ $laptopL: 1440px;
 
 .section5 {
   &__cart {
-    background-image: url(/img/background3.png);
+    background-image: url(../img/background3.png);
     width: 100%;
     min-height: 75vh;
     background-size: cover;
