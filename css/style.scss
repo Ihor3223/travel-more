@@ -1,21 +1,29 @@
 $text: "Aleo", serif;
 $subtitles: "Josefin Sans", sans-serif;
-$tablet: 768px;
-$laptop: 1024px;
+$tablet: 769px;
+$laptop: 1025px;
 $laptopL: 1440px;
 * {
   box-sizing: border-box;
 }
 
 .container {
-  width: 70%;
+  width: 70% !important;
   margin: auto !important;
+
+  @media screen and (max-width: $laptop) {
+    width: 80% !important;
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: 90% !important;
+  }
 }
 
 .section1 {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   background-image: url(../img/head_img.png);
   background-size: cover;
   display: flex;
@@ -53,6 +61,7 @@ $laptopL: 1440px;
         width: 150px;
         min-height: 55px;
         background-color: #5474fd;
+
         text-align: center;
         color: white;
         font-size: 13px;
@@ -105,8 +114,9 @@ $laptopL: 1440px;
   &-header {
     width: 100%;
     background-color: #5474fd;
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 9;
     cursor: pointer;
   }
   &-block {
@@ -130,10 +140,11 @@ $laptopL: 1440px;
       justify-content: space-between;
       align-items: center;
       font-size: 12px;
-      padding-right: 100px;
-      &__fix {
-        margin-left: 35px;
+      width: 100%;
 
+      &__fix {
+        width: 25%;
+        text-align: right;
         cursor: pointer;
         transition-duration: 0.3s;
         transition-property: transform;
@@ -158,10 +169,13 @@ $laptopL: 1440px;
     display: flex;
     height: 75vh;
     &-container {
-      width: 70%;
-      margin: auto;
+      @extend .container;
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: $laptop) {
+        flex-wrap: wrap;
+      }
     }
   }
   &-aside {
@@ -169,6 +183,11 @@ $laptopL: 1440px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media screen and (max-width: $laptop) {
+      align-items: center;
+    }
+
     &_caption {
       text-align: center;
       color: #e8e8e8;
@@ -219,9 +238,18 @@ $laptopL: 1440px;
     align-items: center;
     max-width: 40%;
 
+    @media screen and (max-width: $laptop) {
+      max-width: 100%;
+      width: 100%;
+    }
+
     &-house {
       margin-right: 150px;
       margin-bottom: 10px;
+
+      @media screen and (max-width: $laptop) {
+        margin: 10px 0;
+      }
     }
   }
 }
@@ -330,11 +358,12 @@ $laptopL: 1440px;
 }
 
 .section5 {
-  &__cart {
-    background-image: url(../img/background3.png);
-    width: 100%;
-    min-height: 75vh;
-    background-size: cover;
+  background-image: url(../img/background3.png);
+  background-size: cover;
+  min-height: 75vh;
+  width: 100%;
+
+  &__card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -355,13 +384,17 @@ $laptopL: 1440px;
     }
 
     &-block {
-      max-width: 65%;
+      max-width: 100%;
       min-height: 175px;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #333333;
       opacity: 7;
+
+      & > img {
+        height: 100%;
+      }
 
       &_box {
         padding-left: 20px;
@@ -391,11 +424,18 @@ $laptopL: 1440px;
 .down_border {
   width: 100%;
   min-height: 35vh;
+  margin: 0;
   background-color: #333333;
   display: flex;
-  justify-content: center;
+
   align-items: center;
-  margin: 0;
+
+  &-container {
+    @extend .container;
+
+    display: flex;
+    justify-content: center;
+  }
 
   &-check {
     margin: 0;
@@ -406,27 +446,27 @@ $laptopL: 1440px;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
-    width: 60px;
+    align-items: center;
+
+    & > img {
+      margin-bottom: 10px;
+      width: 60px;
+    }
+
+    &__fixtext {
+      display: flex;
+      align-items: center;
+    }
 
     &__say {
       font-size: 30px;
       margin: 0;
       font-family: $subtitles;
       color: white;
+      width: 100%;
+      min-width: 200px;
+      text-align: center;
     }
-  }
-
-  &-second {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    width: 60px;
-  }
-  &-three {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    width: 60px;
   }
 }
 
@@ -473,6 +513,18 @@ $laptopL: 1440px;
     display: flex;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    background-color: white;
+  }
+  &__svg:hover {
+    transform: scale(1.1);
+    background-color: #5474fd;
   }
 }
 
@@ -494,8 +546,18 @@ $laptopL: 1440px;
     font-size: 12px;
     letter-spacing: 0.2em;
     font-weight: lighter;
+    padding: 10px;
     color: white;
     text-decoration: none;
     scroll-behavior: smooth;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+  }
+  &__down:hover {
+    transform: rotate(0deg);
   }
 }

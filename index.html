@@ -8,19 +8,19 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
+      href="./favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/favicon/favicon-32x32.png"
+      href="./favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/favicon/favicon-16x16.png"
+      href="./favicon/favicon-16x16.png"
     />
 
     <link rel="stylesheet" href="./css/style.css" />
@@ -49,21 +49,28 @@
         </div>
         <div class="scroll">
           <a href="#bottom" class="scroll__down">Scroll Down</a>
-          <img src="./svg/scroll.png" alt="down" width="15px" height="15px" />
-        </div>
-      </div>
-      <div class="section1-header">
-        <div class="section1-block container">
-          <div class="section1-block_lead"><h2>BHROMAON</h2></div>
-          <div class="section1-block_link">
-            <a class="section1-block_link__fix">WHO WE ARE</a>
-            <a class="section1-block_link__fix">WHAT WE DO</a>
-            <a class="section1-block_link__fix">TRAVEL WITH US</a>
-            <a class="section1-block_link__fix">CONTACT US</a>
-          </div>
+          <img
+            src="./svg/iconmonstr-arrow-65.svg"
+            alt="down"
+            width="15px"
+            height="15px"
+          />
         </div>
       </div>
     </section>
+
+    <div class="section1-header">
+      <div class="section1-block container">
+        <div class="section1-block_lead"><h2>BHROMAON</h2></div>
+        <div class="section1-block_link">
+          <a class="section1-block_link__fix">WHO WE ARE</a>
+          <a class="section1-block_link__fix">WHAT WE DO</a>
+          <a class="section1-block_link__fix">TRAVEL WITH US</a>
+          <a class="section1-block_link__fix">CONTACT US</a>
+        </div>
+      </div>
+    </div>
+
     <section class="section2">
       <div class="section2__wrap">
         <div class="section2__wrap-container">
@@ -92,20 +99,29 @@
         </div>
       </div>
     </section>
-    <div class="down_border container">
-      <div class="down_border-first">
-        <img src="./img/search.png" alt="search" />
-        <p class="down_border-first__say">Search Places</p>
-      </div>
-      <div class="dotted"></div>
-      <div class="down_border-second">
-        <img src="./img/accept.png" alt="accept" />
-        <p class="down_border-first__say">Select Places</p>
-      </div>
-      <div class="dotted"></div>
-      <div class="down_border-three">
-        <img src="./img/like.png" alt="like" />
-        <p class="down_border-first__say">Book & Enjoy</p>
+    <div class="down_border">
+      <div class="down_border-container">
+        <div class="down_border-first">
+          <img src="./img/search.png" alt="search" />
+          <div class="down_border-first__fixtext">
+            <p class="down_border-first__say">Search Places</p>
+          </div>
+        </div>
+        <div class="dotted"></div>
+        <div class="down_border-first">
+          <img src="./img/accept.png" alt="accept" />
+          <div class="down_border-first__fixtext">
+            <p class="down_border-first__say">Select Places</p>
+          </div>
+        </div>
+
+        <div class="dotted"></div>
+        <div class="down_border-first">
+          <img src="./img/like.png" alt="like" />
+          <div class="down_border-first__fixtext">
+            <p class="down_border-first__say">Book & Enjoy</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -141,29 +157,37 @@
         </div>
       </div>
     </section>
-    <section class="sectiion5">
-      <div class="section5__cart container">
-        <div class="section5__cart-last">
-          <h2 class="section5__cart-inner">What Our Tourist Say</h2>
+    <section class="section5">
+      <div class="section5__card container">
+        <div class="section5__card-last">
+          <h2 class="section5__card-inner">What Our Tourist Say</h2>
 
-          <div class="section5__cart-block">
+          <div class="section5__card-block">
             <img
               src="./img/manmount.png"
               alt="man"
               width="420px"
               height="230px"
             />
-            <div class="section5__cart-block_box">
-              <h3 class="section5__cart-block_box_curent">SAM SUMON</h3>
-              <p class="section5__cart-block_box_thumb">
-                <sup> &#x275E;</sup> But i must explain to you how all this
-                mistaken idea of account to denouncin pleasure and pricing pain.
-                But i must explain to you how all this mistaken idea of account
-                to nai denouncing pleasure and pricing pain was account born and
-                i account will giv you a complite account of the system was
-                account born and i account will give you a nai the complete
-                account of the system .
-              </p>
+            <div class="section5__card-block_box">
+              <h3 class="section5__card-block_box_curent">SAM SUMON</h3>
+              <div>
+                <p class="section5__card-block_box_thumb">
+                  <img
+                    src="./img/kav.png"
+                    width="12px"
+                    height="12px"
+                    alt="kav"
+                  />
+                  But i must explain to you how all this mistaken idea of
+                  account to denouncin pleasure and pricing pain. But i must
+                  explain to you how all this mistaken idea of account to nai
+                  denouncing pleasure and pricing pain was account born and i
+                  account will giv you a complite account of the system was
+                  account born and i account will give you a nai the complete
+                  account of the system .
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -174,11 +198,31 @@
       <h2 class="foot__basket">BHROAMON</h2>
       <p class="foot__promo">Safe travel Anywhere</p>
       <div class="foot__icons container">
-        <img class="foot__svg" src="./svg/facebook.png" alt="facebook" />
-        <img class="foot__svg" src="./svg/twitter.png" alt="twitter" />
-        <img class="foot__svg" src="./svg/in.png" alt="link" />
-        <img class="foot__svg" src="./svg/youtube.png" alt="youtube" />
-        <img class="foot__svg" src="./svg/pinter.png" alt="pinterest" />
+        <img
+          class="foot__svg"
+          src="./svg/iconmonstr-facebook-2.svg"
+          alt="facebook"
+        />
+        <img
+          class="foot__svg"
+          src="./svg/iconmonstr-twitter-2.svg"
+          alt="twitter"
+        />
+        <img
+          class="foot__svg"
+          src="./svg/iconmonstr-linkedin-2.svg"
+          alt="link"
+        />
+        <img
+          class="foot__svg"
+          src="./svg/iconmonstr-youtube-7.svg"
+          alt="youtube"
+        />
+        <img
+          class="foot__svg"
+          src="./svg/iconmonstr-pinterest-2.svg"
+          alt="pinterest"
+        />
       </div>
     </div>
   </body>
